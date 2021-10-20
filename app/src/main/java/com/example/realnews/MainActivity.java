@@ -83,6 +83,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         Uri.Builder uriBuilder = baseUri.buildUpon();
         uriBuilder.appendQueryParameter("orderBy", "newest");
         uriBuilder.appendQueryParameter("type", "liveblog");
+        uriBuilder.appendQueryParameter("show-tags", "contributor");
+
         return new NewsLoader(this, uriBuilder.toString());
 
     }
